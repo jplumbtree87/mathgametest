@@ -14,10 +14,16 @@
 <div class ="container">
 <div ng-app="myApp" ng-controller="myCtrl">
 			<br><br>
-			#Correct: {{correct}}<br><br>
-           	Question: {{randomQuestion}}
-			<br><br>
+			<div class="row">
+			<div class="col-xs-12">#Correct: {{correct}}</div>
+			</div>
+			<div class="row">
+           	<div class="col-xs-12">Question: {{randomQuestion}}</div>
+			</div>
+			</br></br>
 			<label>
+			<div class="row">
+			<div class="col-xs-12">
 				<div class="panel panel-primary">
 				<div class="panel-heading">Operation</div>
 				<div class="panel-body">
@@ -32,7 +38,11 @@
 				</label>
 				</div>
 				</div>
+				</div>
+				</div>
 				<br/>
+				<div class="row">
+					<div class="col-xs-12">
 				<div class="panel panel-primary">
 				<div class="panel-heading">Difficulty</div>
 				<div class="panel-body">
@@ -43,13 +53,26 @@
 				Hard
 				</label>
 				</div>
-				</div><br/>
-				
+				</div>
+				</div>
+				</div>
+				<br/>
+<div class="row">
+	<div class="col-xs-12">				
 <label>
-Answer:
+
+				
+					Answer:
 <input type="text" id="answerName">
-</label><br/><br/>
+</label>
+</div>
+</div>
+<br/><br/>
+<div class="row">
+					<div class="col-xs-12">
 <button ng-click="submitAnswer()" class="btn btn-primary btn-block">Submit your answer</button>
+</div>
+</div>
 </div>
 </div>
 </body>
