@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/bootstrap.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/app.js"></script>
+
+</head>
+
+<body>
+<div class ="container">
+<div ng-app="myApp" ng-controller="myCtrl">
+    
+			#Correct: {{correct}}<br><br>
+           	Question: {{randomQuestion}}
+			<br><br>
+			<label>
+				<div class="panel panel-primary">
+				<div class="panel-heading">Operation</div>
+				<div class="panel-body">
+				<label class="radio-inline"><input type="radio" ng-model="value" ng-change="nextQuestion()" name="question" value="Addition">
+				Addition
+				</label>
+				<label class="radio-inline"><input type="radio" ng-model="value" ng-change="nextQuestion()" name="question" value="Subtraction">
+				Subtraction
+				</label>
+				<label class="radio-inline"><input type="radio" ng-model="value" ng-change="nextQuestion()" name="question" value="Multiplication">
+				Multiplication
+				</label>
+				</div>
+				</div>
+				<br/>
+				<div class="panel panel-primary">
+				<div class="panel-heading">Difficulty</div>
+				<div class="panel-body">
+				<label class="radio-inline"><input type="radio" ng-model="value1" ng-change="nextQuestion()" name="difficulty" value="Easy">
+				Easy
+				</label>
+				<label class="radio-inline"><input type="radio" ng-model="value1" ng-change="nextQuestion()" name="difficulty" value="Hard">
+				Hard
+				</label>
+				</div>
+				</div><br/>
+				
+<label>
+Answer:
+<input type="text" id="answerName">
+</label><br/><br/>
+<button ng-click="submitAnswer()" class="btn btn-primary btn-block">Submit your answer</button>
+</div>
+</div>
+</body>
+</html>
